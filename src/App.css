@@ -1,0 +1,215 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.App-header .controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.color-mode-toggle {
+  display: flex;
+  gap: 15px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.color-mode-toggle label {
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.color-mode-toggle input[type="radio"] {
+  display: none;
+}
+
+.color-mode-toggle input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload {
+  border: none;
+  display: inline-block;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.file-upload:hover {
+    background-color: #0056b3;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.question-selector select {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 1rem;
+    color: #333; /* Ensure text is not white */
+}
+
+.question-selector button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none; /* Remove border for a cleaner look */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.question-selector button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.question-selector button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.visualization-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.token-sequence-container {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  min-height: 250px;
+  border: 1px solid #dee2e6;
+}
+
+.token-sequence-container h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.token-sequence {
+  line-height: 2.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.token {
+  display: inline-block;
+  padding: 2px 4px; /* Reduced padding */
+  margin: 1px; /* Reduced margin */
+  font-size: 0.8rem; /* Reduced font size */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
+}
+
+.token:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.chart-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 270px; /* Adjusted height */
+}
+
+.moving-average-chart-container h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.chart-container h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
